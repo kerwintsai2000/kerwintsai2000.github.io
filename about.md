@@ -1,8 +1,31 @@
 ---
 layout: page
-title: About
+title: 关于这个人
 ---
 
-**Not Pure Poole** is a simple, beautiful, and powerful Jekyll theme for blogs. It is built on [Poole](https://github.com/poole/poole) and [Pure](https://purecss.io/).
+## 名片
 
-For more information about Not Pure Poole, please browse the [README](https://github.com/vszhub/not-pure-poole) file.
+**中文名：**czj
+**英文名：**Kerwin
+**法语名：**Evan
+**学校：**École Centrale de Pékin
+**标签：**技术宅 美食家 工程师 乒乓球 桌游 手工 追剧 王者荣耀
+**梦想：**成为全栈工程师
+
+## Q&A
+
+**为什么英文名和法语名不一样？**
+我也不知道为什么会发生这种事情
+
+**为什么法语名长得这么英语？**
+虽然但是我只会它的法语读音
+
+**这个什么什么学校是所好学校吗？**
+我不清楚，但是我知道清华也是一所好学校
+
+**真的是美食家吗？**
+指掌握kfc最新活动动向
+
+**是什么攻城狮呢？**
+国际通用工程师（也许？）
+
