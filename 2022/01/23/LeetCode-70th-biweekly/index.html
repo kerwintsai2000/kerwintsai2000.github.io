@@ -1,0 +1,620 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>LeetCode第70场双周赛复盘 - Kerwin&#39;s Petit Broken Site</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="kerwintsai,"> 
+    <meta name="description" content="昨晚在力扣上参加了双周赛，成绩比预期的好，本来以为离开OI四年了估计就只能写出第一道题。我觉得我运气挺好，碰上这场题目水，突然让我重拾回信心，我觉得我可以坚持练题，把算法基本功打扎实了。
+说题目水，,"> 
+    <meta name="author" content="KerwinTsai2000"> 
+    <link rel="alternative" href="atom.xml" title="Kerwin&#39;s Petit Broken Site" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
+
+    
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/codemirror.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/theme/dracula.css">
+
+    
+<link rel="stylesheet" href="/css/obsidian.css">
+
+    
+<link rel="stylesheet" href="/css/ball-atom.min.css">
+
+    
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+    
+    <script>var musiclist = ""</script>
+    
+<script src="/js/loadaplayer.js"></script>
+
+    <!-- 引用依赖 -->
+    
+<link rel="stylesheet" href="/aplayer/dist/APlayer.min.css">
+
+    
+<script src="/aplayer/dist/APlayer.min.js"></script>
+<script src="/js/Meting.min.js"></script>
+
+    
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body class="loading">
+    <div class="loader">
+        <div class="la-ball-atom la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <span id="config-title" style="display:none">Kerwin&#39;s Petit Broken Site</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div class="scrollbar gradient-bg-rev"></div>
+<div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <div class="navigation animated fadeIn fast delay-1s">
+        <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="https://kerwintsai2000.github.io">
+        <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
+        <h3 class="subtitle">LeetCode第70场双周赛复盘</h3>
+        <div class="social">
+            <!--        <div class="like-icon">-->
+            <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+            <!--        </div>-->
+            <div>
+                <div class="share">
+                    
+                        <a href="javascript:;" class="iconfont icon-share1"></a>
+                        <div class="share-component-cc" data-disabled="facebook,douban,linkedin,diandian,tencent,google"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="section">
+        <div class=article-header-wrapper>
+    <div class="article-header">
+        <div class="article-cover animated fadeIn" style="
+            animation-delay: 600ms;
+            animation-duration: 1.2s;
+            background-image: 
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+                url('/img/cover.jpg') ">
+        </div>
+        <div class="else">
+            <p class="animated fadeInDown">
+                
+                <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
+                
+                January 23, 2022
+            </p>
+            <h3 class="post-title animated fadeInDown"><a href="/2022/01/23/LeetCode-70th-biweekly/" title="LeetCode第70场双周赛复盘" class="">LeetCode第70场双周赛复盘</a>
+            </h3>
+            
+            <p class="post-count animated fadeInDown">
+                
+                <span>
+                    <b class="iconfont icon-text2"></b> <i>Words count</i>
+                    8.6k
+                </span>
+                
+                
+                <span>
+                    <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                    8 mins.
+                </span>
+                
+                
+                
+                <span id="busuanzi_container_page_pv">
+                    <b class="iconfont icon-read"></b> <i>Read count</i>
+                    <span id="busuanzi_value_page_pv">0</span>
+                </span>
+                
+            </p>
+            
+            
+            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li></ul>
+            
+        </div>
+    </div>
+</div>
+
+<div class="screen-gradient-after">
+    <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+            <div class="bold-underline-links screen-gradient-sponsor">
+                <p>
+                    <span class="animated fadeIn delay-1s"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class='main'>
+        <div class="content markdown animated fadeIn">
+            <p>昨晚在力扣上参加了双周赛，成绩比预期的好，本来以为离开OI四年了估计就只能写出第一道题。我觉得我运气挺好，碰上这场题目水，突然让我重拾回信心，我觉得我可以坚持练题，把算法基本功打扎实了。</p>
+<p>说题目水，是因为这里面好像什么也没考，只有第三道题用了个广搜，其他的都是用土方法。这就让我意识到了，刷算法题，其实就是在练习自己编程解决问题时快速找到最优方法的能力。各种具体的算法是工具，但更重要的是面对问题时灵活的思路、随机应变的能力。</p>
+<p>这篇博客也是我在GitHub个人主页上的第一篇，想弄这个主页很久了，今天刚好以本次比赛复盘作为契机开站。今天这个开站日期也不错：1月23日。（欢呼雀跃）</p>
+<h2 id="5971-打折购买糖果的最小开销"><a href="#5971-打折购买糖果的最小开销" class="headerlink" title="5971. 打折购买糖果的最小开销"></a>5971. 打折购买糖果的最小开销</h2><p>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/minimum-cost-of-buying-candies-with-discount/">5971. 打折购买糖果的最小开销 - 力扣（LeetCode） (leetcode-cn.com)</a></p>
+<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>一家商店正在打折销售糖果。每购买两个糖果，商店会免费送一个糖果。</p>
+<p>免费送的糖果唯一的限制是：它的价格需要小于等于购买的两个糖果价格的较小值 。</p>
+<p>比方说，总共有 4 个糖果，价格分别为 1 ，2 ，3 和 4 ，一位顾客买了价格为 2 和 3 的糖果，那么他可以免费获得价格为 1 的糖果，但不能获得价格为 4 的糖果。</p>
+<p>给你一个下标从 0 开始的整数数组 cost ，其中 cost[i] 表示第 i 个糖果的价格，请你返回获得所有糖果的最小总开销。</p>
+<p><strong>数据范围：</strong></p>
+<ul>
+<li><code>1 &lt;= cost.length &lt;= 100</code></li>
+<li><code>1 &lt;= cost[i] &lt;= 100</code></li>
+</ul>
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>这道题使用的是贪心策略，把第一贵和第二贵的凑对，这样就可能免费得到第三贵的，以此类推。</p>
+<pre><code class="python">class Solution:
+    def minimumCost(self, cost: List[int]) -&gt; int:
+        cost.sort(reverse=True)
+        sum=0
+        for i in range(len(cost)):
+            if i%3!=2:
+                sum+=cost[i]
+        return sum
+</code></pre>
+<h2 id="5972-统计隐藏数组数目"><a href="#5972-统计隐藏数组数目" class="headerlink" title="5972. 统计隐藏数组数目"></a>5972. 统计隐藏数组数目</h2><p>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/count-the-hidden-sequences/">5972. 统计隐藏数组数目 - 力扣（LeetCode） (leetcode-cn.com)</a></p>
+<h3 id="题目-1"><a href="#题目-1" class="headerlink" title="题目"></a>题目</h3><p>给你一个下标从 0 开始且长度为 n 的整数数组 differences ，它表示一个长度为 n + 1 的 隐藏 数组 相邻 元素之间的 差值 。更正式的表述为：我们将隐藏数组记作 hidden ，那么 differences[i] = hidden[i + 1] - hidden[i] 。</p>
+<p>同时给你两个整数 lower 和 upper ，它们表示隐藏数组中所有数字的值都在 闭 区间 [lower, upper] 之间。</p>
+<p>比方说，differences = [1, -3, 4] ，lower = 1 ，upper = 6 ，那么隐藏数组是一个长度为 4 且所有值都在 1 和 6 （包含两者）之间的数组。<br>[3, 4, 1, 5] 和 [4, 5, 2, 6] 都是符合要求的隐藏数组。<br>[5, 6, 3, 7] 不符合要求，因为它包含大于 6 的元素。<br>[1, 2, 3, 4] 不符合要求，因为相邻元素的差值不符合给定数据。<br>请你返回 符合 要求的隐藏数组的数目。如果没有符合要求的隐藏数组，请返回 0 。</p>
+<p><strong>数据范围：</strong></p>
+<ul>
+<li><code>n == differences.length</code></li>
+<li><code>1 &lt;= n &lt;= 105</code></li>
+<li><code>-105 &lt;= differences[i] &lt;= 105</code></li>
+<li><code>-105 &lt;= lower &lt;= upper &lt;= 105</code></li>
+</ul>
+<h3 id="题解-1"><a href="#题解-1" class="headerlink" title="题解"></a>题解</h3><p>把差逐个累加，得到隐藏数组各项扣除首项后的数组。确定该数组的上下界，与输入要求的上下界做差加一即为答案。</p>
+<pre><code class="python">class Solution:
+    def numberOfArrays(self, differences: List[int], lower: int, upper: int) -&gt; int:
+        a_diff = [0]
+        for i in range(len(differences)):
+            a_diff.append(a_diff[i]+differences[i])
+        ans = (upper-lower) - (max(a_diff)-min(a_diff)) + 1
+        if ans&lt;0:
+            return 0
+        else:
+            return ans
+</code></pre>
+<h2 id="5973-价格范围内最高排名的-K-样物品"><a href="#5973-价格范围内最高排名的-K-样物品" class="headerlink" title="5973. 价格范围内最高排名的 K 样物品"></a>5973. 价格范围内最高排名的 K 样物品</h2><p>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/k-highest-ranked-items-within-a-price-range/">5973. 价格范围内最高排名的 K 样物品 - 力扣（LeetCode） (leetcode-cn.com)</a></p>
+<h3 id="题目-2"><a href="#题目-2" class="headerlink" title="题目"></a>题目</h3><p>给你一个下标从 0 开始的二维整数数组 grid ，它的大小为 m × n ，表示一个商店中物品的分布图。数组中的整数含义为：</p>
+<ul>
+<li><p>0 表示无法穿越的一堵墙。</p>
+</li>
+<li><p>1 表示可以自由通过的一个空格子。</p>
+</li>
+<li><p>所有其他正整数表示该格子内的一样物品的价格。你可以自由经过这些格子。</p>
+</li>
+</ul>
+<p>从一个格子走到上下左右相邻格子花费 1 步。</p>
+<p>同时给你一个整数数组 pricing 和 start ，其中 pricing = [low, high] 且 start = [row, col] ，表示你开始位置为 (row, col) ，同时你只对物品价格在 闭区间 [low, high] 之内的物品感兴趣。同时给你一个整数 k 。</p>
+<p>你想知道给定范围 内 且 排名最高 的 k 件物品的 位置 。排名按照优先级从高到低的以下规则制定：</p>
+<ol>
+<li><p>距离：定义为从 start 到一件物品的最短路径需要的步数（较近 距离的排名更高）。</p>
+</li>
+<li><p>价格：较低 价格的物品有更高优先级，但只考虑在给定范围之内的价格。</p>
+</li>
+<li><p>行坐标：较小 行坐标的有更高优先级。</p>
+</li>
+<li><p>列坐标：较小 列坐标的有更高优先级。</p>
+</li>
+</ol>
+<p>请你返回给定价格内排名最高的 k 件物品的坐标，将它们按照排名排序后返回。如果给定价格内少于 k 件物品，那么请将它们的坐标全部返回。</p>
+<p><strong>数据范围：</strong></p>
+<ul>
+<li><code>m == grid.length</code></li>
+<li><code>n == grid[i].length</code></li>
+<li><code>1 &lt;= m, n &lt;= 105</code></li>
+<li><code>1 &lt;= m * n &lt;= 105</code></li>
+<li><code>0 &lt;= grid[i][j] &lt;= 105</code></li>
+<li><code>pricing.length == 2</code></li>
+<li><code>2 &lt;= low &lt;= high &lt;= 105</code></li>
+<li><code>start.length == 2</code></li>
+<li><code>0 &lt;= row &lt;= m - 1</code></li>
+<li><code>0 &lt;= col &lt;= n - 1</code></li>
+<li><code>grid[row][col] &gt; 0</code></li>
+<li><code>1 &lt;= k &lt;= m * n</code></li>
+</ul>
+<h3 id="题解-2"><a href="#题解-2" class="headerlink" title="题解"></a>题解</h3><p>因为排序的优先级最高的是距离，所以马上想到的方法就是广度优先搜索（BFS）。在搜索过程中，当相同距离的所有点搜索完后，对该距离找到的点按后三条规则进行排序，加入答案。</p>
+<p>这里学到了个排序小技巧，把排序要参考的三个数放一起加列表里，用sorted()函数就ok了。</p>
+<p>这个代码写得太冗长了，下次努力写漂亮点quq。我这会儿突然意识到距离也可以放进sorted里一起排序，这样就不用搞个t_ans了。但是我懒得改了。</p>
+<pre><code class="python">class Solution:
+    def highestRankedKItems(self, grid: List[List[int]], pricing: List[int], start: List[int], k: int) -&gt; List[List[int]]:
+        # 行列数
+        m = len(grid); n = len(grid[0])
+        # 标记是否搜索过
+        book = []
+        for i in range(m):
+            n_book = []
+            for j in range(n):
+                n_book.append(False)
+            book.append(n_book)
+        book[start[0]][start[1]]=True
+        
+        directions = [[0,1],[0,-1],[1,0],[-1,0]]  # 方向
+        ans = []
+        ansk = 0
+        queue = [start]  # 广搜队列
+        dis = [0]
+        predis = 0
+        head = 0; tail = 1
+        # 起点也要判断
+        if pricing[0]&lt;=grid[start[0]][start[1]]&lt;=pricing[1]:
+            ans.append(start)
+            ansk+=1
+            if ansk==k:
+                return ans
+        t_ans = []  # 保存同距离的答案用于排序
+        while head &lt; tail:
+            i,j = queue[head]
+            if dis[head]!=predis:
+                t_ans = sorted(t_ans)  # 排序小技巧
+                for t in t_ans:
+                    ans.append([t[1],t[2]])
+                    ansk+=1
+                    if ansk==k:
+                        return ans
+                t_ans = []
+            # 对四个方向搜索
+            for d in directions:
+                ni = i+d[0]
+                nj = j+d[1]
+                # 将能拓展的点加入队列
+                if (0&lt;=ni&lt;m) and (0&lt;=nj&lt;n) and (grid[ni][nj]!=0) and (not book[ni][nj]):
+                    queue.append([ni,nj])
+                    dis.append(dis[head]+1)
+                    book[ni][nj]=True
+                    tail+=1
+                    # 将满足答案的点加入临时答案
+                    if pricing[0]&lt;=grid[ni][nj]&lt;=pricing[1]:
+                        t_ans.append([grid[ni][nj],ni,nj])
+            predis = dis[head]  # 用来判断下个点距离是否相同
+            head+=1
+        return ans
+</code></pre>
+<h2 id="5974-分隔长廊的方案数"><a href="#5974-分隔长廊的方案数" class="headerlink" title="5974. 分隔长廊的方案数"></a>5974. 分隔长廊的方案数</h2><p>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/number-of-ways-to-divide-a-long-corridor/">5974. 分隔长廊的方案数 - 力扣（LeetCode） (leetcode-cn.com)</a></p>
+<h3 id="题目-3"><a href="#题目-3" class="headerlink" title="题目"></a>题目</h3><p>在一个图书馆的长廊里，有一些座位和装饰植物排成一列。给你一个下标从 0 开始，长度为 n 的字符串 corridor ，它包含字母 ‘S’ 和 ‘P’ ，其中每个 ‘S’ 表示一个座位，每个 ‘P’ 表示一株植物。</p>
+<p>在下标 0 的左边和下标 n - 1 的右边 已经 分别各放了一个屏风。你还需要额外放置一些屏风。每一个位置 i - 1 和 i 之间（1 &lt;= i &lt;= n - 1），至多能放一个屏风。</p>
+<p>请你将走廊用屏风划分为若干段，且每一段内都 恰好有两个座位 ，而每一段内植物的数目没有要求。可能有多种划分方案，如果两个方案中有任何一个屏风的位置不同，那么它们被视为 不同 方案。</p>
+<p>请你返回划分走廊的方案数。由于答案可能很大，请你返回它对 109 + 7 取余 的结果。如果没有任何方案，请返回 0 。</p>
+<p><strong>数据范围：</strong></p>
+<ul>
+<li><code>n == corridor.length</code></li>
+<li><code>1 &lt;= n &lt;= 105</code></li>
+<li><code>corridor[i]</code> 要么是 <code>&#39;S&#39;</code> ，要么是 <code>&#39;P&#39;</code> 。</li>
+</ul>
+<h3 id="题解-3"><a href="#题解-3" class="headerlink" title="题解"></a>题解</h3><p>这道题用来压轴，并且难度设置为困难确实令人费解。思路并不复杂，遍历字符串，过程中找到两个座位后，统计到下一个座位之间的植物数np，这个位置能放屏风的方案数就是np+1，依次反复。根据乘法原理，把每个位置的方案数乘到一起就是答案。</p>
+<pre><code class="python">class Solution:
+    def numberOfWays(self, corridor: str) -&gt; int:
+        ns = 0
+        np = 0
+        ans = 1
+        for i in range(len(corridor)):
+            if ns==2:
+                if corridor[i]==&quot;P&quot;:
+                    np+=1
+                elif corridor[i]==&quot;S&quot;:
+                    ans=(ans*(np+1))%(10**9+7)
+                    np=0
+                    ns=1
+            else:
+                if corridor[i]==&quot;S&quot;:
+                    ns+=1
+        if ns==1 or ns==0:
+            ans = 0
+        return ans
+</code></pre>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls"
+                data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+            <ul id="audio-list" style="display:none">
+                
+                
+                <li title='0' data-url='/statics/chengdu.mp3'></li>
+                
+                    
+            </ul>
+            
+                        
+            
+            
+    <div id='gitalk-container' class="comment link"
+        data-ae='false'
+        data-ci=''
+        data-cs=''
+        data-r=''
+        data-o=''
+        data-a=''
+        data-d=''
+        data-p='https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    >Comments</div>
+
+
+            
+            
+        </div>
+        <div class="sidebar">
+            <div class="box animated fadeInRight">
+                <div class="subbox">
+                    <img src="https://avatars.githubusercontent.com/u/61953232?s=400&u=9c8cfd875226c130546bf2ac40a73efdd936cf77&v=4" height=300 width=300></img>
+                    <p>KerwinTsai2000</p>
+                    <span>Think like an artist, develop like an artisan</span>
+                    <dl>
+                        
+                            
+                                <dd><a href="https://github.com/kerwintsai2000" target="_blank"><span
+                                    class=" iconfont icon-github"></span></a></dd>
+                            
+                            
+                            
+                        
+                        
+                    </dl>
+                </div>
+                <ul>
+                    <li><a href="/">2 <p>Articles</p></a></li>
+                    <li><a href="/categories">0 <p>Categories</p></a></li>
+                    <li><a href="/tags">1 <p>Tags</p></a></li>
+                </ul>
+            </div>
+            
+            
+            
+            <div class="box sticky animated fadeInRight faster">
+                <div id="toc" class="subbox">
+                    <h4>Contents</h4>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#5971-%E6%89%93%E6%8A%98%E8%B4%AD%E4%B9%B0%E7%B3%96%E6%9E%9C%E7%9A%84%E6%9C%80%E5%B0%8F%E5%BC%80%E9%94%80"><span class="toc-number">1.</span> <span class="toc-text">5971. 打折购买糖果的最小开销</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE"><span class="toc-number">1.1.</span> <span class="toc-text">题目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3"><span class="toc-number">1.2.</span> <span class="toc-text">题解</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5972-%E7%BB%9F%E8%AE%A1%E9%9A%90%E8%97%8F%E6%95%B0%E7%BB%84%E6%95%B0%E7%9B%AE"><span class="toc-number">2.</span> <span class="toc-text">5972. 统计隐藏数组数目</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE-1"><span class="toc-number">2.1.</span> <span class="toc-text">题目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3-1"><span class="toc-number">2.2.</span> <span class="toc-text">题解</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5973-%E4%BB%B7%E6%A0%BC%E8%8C%83%E5%9B%B4%E5%86%85%E6%9C%80%E9%AB%98%E6%8E%92%E5%90%8D%E7%9A%84-K-%E6%A0%B7%E7%89%A9%E5%93%81"><span class="toc-number">3.</span> <span class="toc-text">5973. 价格范围内最高排名的 K 样物品</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE-2"><span class="toc-number">3.1.</span> <span class="toc-text">题目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3-2"><span class="toc-number">3.2.</span> <span class="toc-text">题解</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5974-%E5%88%86%E9%9A%94%E9%95%BF%E5%BB%8A%E7%9A%84%E6%96%B9%E6%A1%88%E6%95%B0"><span class="toc-number">4.</span> <span class="toc-text">5974. 分隔长廊的方案数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE-3"><span class="toc-number">4.1.</span> <span class="toc-text">题目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3-3"><span class="toc-number">4.2.</span> <span class="toc-text">题解</span></a></li></ol></li></ol>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+    <div id="back-to-top" class="animated fadeIn faster">
+        <div class="flow"></div>
+        <span class="percentage animated fadeIn faster">0%</span>
+        <span class="iconfont icon-top02 animated fadeIn faster"></span>
+    </div>
+</body>
+<footer>
+    <p class="copyright" id="copyright">
+        &copy; 2022
+        <span class="gradient-text">
+            KerwinTsai2000
+        </span>.
+        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        Theme
+        <span class="gradient-text">
+            <a href="https://github.com/TriDiamond/hexo-theme-obsidian" title="Obsidian" target="_blank" rel="noopener">Obsidian</a>
+        </span>
+        <small><a href="https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md" title="v1.4.9.3" target="_blank" rel="noopener">v1.4.9.3</a></small>
+        
+        
+    </p>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX", "TeX"],
+      linebreaks: {
+        automatic: true
+      },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"]
+      ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      noUndefined: {
+        attributes: {
+          mathcolor: "red",
+          mathbackground: "#FFEEEE",
+          mathsize: "90%"
+        }
+      },
+      Macros: {
+        href: "{}"
+      }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script>
+  function initialMathJax() {
+    MathJax.Hub.Queue(function () {
+      var all = MathJax.Hub.getAllJax(),
+        i;
+      // console.log(all);
+      for (i = 0; i < all.length; i += 1) {
+        console.log(all[i].SourceElement().parentNode)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  }
+
+  function reprocessMathJax() {
+    if (typeof MathJax !== 'undefined') {
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    }
+  }
+</script>
+
+
+ 
+<link rel="stylesheet" href="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css">
+ 
+<script src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+  
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/obsidian.js"></script>
+<script src="/js/jquery.truncate.js"></script>
+<script src="/js/search.js"></script>
+ 
+<script src="//cdn.bootcss.com/typed.js/2.0.10/typed.min.js"></script>
+ 
+<script src="//cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+ 
+<script src="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+
+<script src="https://cdn.bootcss.com/codemirror/5.48.4/codemirror.min.js"></script>
+ 
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/css/css.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/xml/xml.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/htmlmixed/htmlmixed.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/clike/clike.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/php/php.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/shell/shell.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/python/python.min.js"></script>
+   
+<script src="/js/busuanzi.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    if ($('span[id^="busuanzi_"]').length) {
+      initialBusuanzi();
+    }
+  });
+</script>
+ 
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/default-skin/default-skin.min.css">
+
+
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+
+<script>
+  function initialTyped() {
+    var typedTextEl = $('.typed-text');
+    if (typedTextEl && typedTextEl.length > 0) {
+      var typed = new Typed('.typed-text', {
+        strings: ['Think like an artist, develop like an artisan', '艺术家思维去思考问题，工匠创造精神去开发'],
+        typeSpeed: 90,
+        loop: true,
+        loopCount: Infinity,
+        backSpeed: 20,
+      });
+    }
+  }
+
+  if ($('.article-header') && $('.article-header').length) {
+    $(document).ready(function () {
+      initialTyped();
+    });
+  }
+</script>
+
+
+
+
+<!-- 引用依赖 -->
+<script>document.write(aplayerconf)</script>
+
+
+
+
+</html>
